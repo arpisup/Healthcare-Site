@@ -1,0 +1,139 @@
+/* healthcare-news.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light Blue Background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #e8eef6;
+    color: #333;
+    padding: 1em 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2980b9; /* Slightly Darker Blue for Logo Text */
+}
+
+nav a {
+    color: #2980b9; /* Slightly Darker Blue for Nav Links */
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db; /* A bit lighter on hover */
+}
+
+/* Style for the active link */
+nav a.active {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: underline; /* Add an underline */
+    color: #333; /* Darken the text color */
+}
+
+.auth a {
+    color: #2980b9;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+.auth a:hover {
+    color: #3498db;
+}
+
+.signup-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #2980b9;
+}
+
+.news-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.news-header h1 {
+    color: #3498db;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.news-article {
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.news-article h2 {
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.news-article p {
+    line-height: 1.4;
+}
+
+.news-article a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-article a:hover {
+    text-decoration: underline;
+}
+
+.loading-message, .error-message {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+.news-footer {
+    text-align: center;
+    margin-top: 2em;
+    color: #777;
+}

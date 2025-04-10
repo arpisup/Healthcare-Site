@@ -1,0 +1,250 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light Blue Background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #e8eef6;
+    color: #333;
+    padding: 1em 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2980b9; /* Slightly Darker Blue for Logo Text */
+}
+
+nav a {
+    color: #2980b9; /* Slightly Darker Blue for Nav Links */
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db; /* A bit lighter on hover */
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+}
+
+.auth a {
+    color: #2980b9;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+.auth a:hover {
+    color: #3498db;
+}
+
+.auth label {
+    margin-right: 0.5em;
+    color: #2980b9;
+}
+
+.auth input[type="text"] {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 1em;
+}
+
+.signup-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #2980b9;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    min-height: 500px; /* Use min-height for flexibility */
+    overflow: hidden;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Subtle overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure image is behind the content */
+}
+
+.hero-content {
+    position: relative; /* Important: Relative to allow normal flow */
+    z-index: 1; /* Ensure content is above the image */
+    text-align: left; /* Adjust to left */
+    color: #333;
+    width: 100%;
+    max-width: 800px; /* Limit width */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add background for readability */
+    margin: 0 auto; /* Center the content horizontally if max-width is used */
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #3498db;
+}
+
+#filter-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#filter-form select,
+#filter-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+#filter-results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    max-height: 300px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#filter-results ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset default ul margins */
+}
+
+#filter-results li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+#filter-results li:last-child {
+    border-bottom: none;
+}
+
+
+/* Buttons */
+.primary-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #2980b9;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3em;
+    background-color: #fff;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.feature-item i {
+    color: #3498db; /*  Blue for Icons */
+    margin-bottom: 0.5em;
+}
+
+.feature-item h3 {
+    color: #2980b9; /* Slightly Darker Blue */
+}
+
+.blue-icon {
+    color: #3498db;
+}
+
+/* Footer Styles */
+footer {
+    background-color:#e8eef6;
+    color: #777;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 1em;
+    }
+
+    nav a {
+        margin: 0 0.5em;
+    }
+
+    .auth {
+        margin-top: 0.5em;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        margin-bottom: 2em;
+    }
+}

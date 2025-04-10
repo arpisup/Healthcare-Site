@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header Styles - Copied from health.css */
+header {
+    background-color: #e8eef6;
+    color: #333;
+    padding: 1em 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2980b9; /* Slightly Darker Blue for Logo Text */
+}
+
+nav a {
+    color: #2980b9; /* Slightly Darker Blue for Nav Links */
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db; /* A bit lighter on hover */
+}
+
+/* Style for the active link */
+nav a.active {
+    font-weight: bold; /* Make the text bold */
+    text-decoration: underline; /* Add an underline */
+    color: #333; /* Darken the text color */
+}
+
+
+.auth a {
+    color: #2980b9;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s ease;
+}
+
+.auth a:hover {
+    color: #3498db;
+}
+
+.signup-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #2980b9;
+}
+
+/* Rest of Medical History Specific Styles */
+#medical-history {
+    padding: 30px 0;
+}
+
+#medical-history h2 {
+    color: #0077b6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.record-filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    background-color: #fff;
+    border: 1px solid #0077b6;
+    color: #0077b6;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-button.active {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+.medical-record {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.medical-record h3 {
+    color: #0077b6;
+    margin-top: 0;
+}
+
+.upload-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.upload-section h3 {
+    color: #0077b6;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.upload-section label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.upload-section input[type="text"],
+.upload-section input[type="date"],
+.upload-section select,
+.upload-section textarea {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important: Include padding and border in the element's total width and height */
+    margin-bottom: 10px;
+}
+
+.upload-section button[type="submit"] {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Keep the footer separate and at the bottom */
+footer {
+    background-color:#e8eef6;
+    color: #777;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+#navbar {
+    float: right;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+#navbar a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/* Highlight the current page */
+#navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff; /* Make sure the active link is still white */
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    header ul {
+        float: none;
+        text-align: center;
+    }
+    header li {
+        display: block;
+        text-align: center;
+    }
+    .team-member {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+     .upload-section label {
+         width: 100%;
+         text-align: left;
+     }
+
+     .upload-section input[type="text"],
+     .upload-section input[type="date"],
+     .upload-section select,
+     .upload-section textarea {
+         width: 100%;
+     }
+
+}
+
+/* Sign-in Popup Styles (Added) */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1; /* Ensure it's on top */
+    overflow: auto; /* Enable scroll if content overflows */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px; /* Slightly rounded corners */
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    width: 400px; /* Adjust as needed */
+    max-width: 90%; /* Responsive width */
+}
+
+.popup-content h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0077b6; /* Heading color matches the theme */
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Slightly darker label color */
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded input corners */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px;
+}
+
+.popup-content input[type="text"]:focus,
+.popup-content input[type="password"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #0077b6; /* Highlight border on focus - matches theme */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add focus shadow */
+}
+
+.popup-content button {
+    background-color: #0077b6; /* Button color matches the theme */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    width: 100%; /* Make buttons full width */
+    margin-bottom: 10px;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.popup-content p {
+    text-align: center;
+    margin-top: 10px;
+    color: #777;
+}
+
+.popup-content a {
+    color: #0077b6; /* Link color matches theme */
+    text-decoration: none;
+}
+
+.popup-content a:hover {
+    text-decoration: underline;
+}
+
+.popup-content hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* Responsive adjustments for the popup */
+@media (max-width: 600px) {
+    .popup-content {
+        width: 95%; /* Wider on smaller screens */
+    }
+}
